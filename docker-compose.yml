@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  app:
+  
+    platform: "linux/amd64"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_CLIENTVAR: "clientvar"
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    image: t3-app
+    volumes:
+      - ./logs:/app/logs  # 新增日志目录挂载
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@localhost:5432/g-imgs
