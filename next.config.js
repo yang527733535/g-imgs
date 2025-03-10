@@ -18,7 +18,9 @@ const config = {
     defaultLocale: "en",
   },
   transpilePackages: ["geist"],
-
+  experimental:{
+    nodeMiddleware:true
+  }
 };
 
 export default config;
