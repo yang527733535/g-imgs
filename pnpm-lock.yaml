@@ -72,6 +72,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^8.1.0
         version: 8.26.0(eslint@8.57.1)(typescript@5.8.2)
+      cloudflare-pages-plugin-trpc:
+        specifier: ^0.3.2
+        version: 0.3.2(@trpc/server@11.0.0-rc.824(typescript@5.8.2))
       drizzle-kit:
         specifier: ^0.24.0
         version: 0.24.2
@@ -941,6 +944,11 @@ packages:
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+
+  cloudflare-pages-plugin-trpc@0.3.2:
+    resolution: {integrity: sha512-3vNL8MsQGA1q3+Y14IsOWYSuYX1NMSDf1fdqoQZEla+8kfiSYXJbiBfN3lE8Ui6F5sGNIgVTmi4mGX76PQaZeA==}
+    peerDependencies:
+      '@trpc/server': 10.16.0
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -3093,6 +3101,10 @@ snapshots:
       fsevents: 2.3.3
 
   client-only@0.0.1: {}
+
+  cloudflare-pages-plugin-trpc@0.3.2(@trpc/server@11.0.0-rc.824(typescript@5.8.2)):
+    dependencies:
+      '@trpc/server': 11.0.0-rc.824(typescript@5.8.2)
 
   color-convert@1.9.3:
     dependencies:
