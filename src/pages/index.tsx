@@ -2,10 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { api } from "~/utils/api";
-
+import { SignIn, useUser } from '@clerk/nextjs'
 export default function Home() {
   // const hello = api.post.hello.useQuery({ text: "from tRPC" });
-
+  //  const { user } = useUser()
+//   if (!user) return <SignIn />
   return (
     <>
       <Head>

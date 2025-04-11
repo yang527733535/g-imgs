@@ -18,9 +18,11 @@
     "preview": "next build && next start",
     "start": "next start -p 8080",
     "typecheck": "tsc --noEmit",
-     "production": "next build && next start -p 3000"
+    "production": "next build && next start -p 3000"
   },
   "dependencies": {
+    "@clerk/localizations": "^3.13.9",
+    "@clerk/nextjs": "^6.14.3",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tanstack/react-query": "^5.50.0",
     "@trpc/client": "^11.0.0-rc.446",
