@@ -17,7 +17,7 @@ npm run build
 
 
 # 复制构建产物
-sudo cp -rf .next /www/wwwroot/g-imgs/
+cp -rf .next /www/wwwroot/g-imgs/
 
 
 # 2. 使用进程管理工具 PM2（推荐方案）
