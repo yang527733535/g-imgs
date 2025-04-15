@@ -8,3 +8,8 @@ while getopts t: flag; do
 done
 
 
+set -Exe pipefail
+
+pnpm i
+chmod +x node_modules/.bin/*
+npm run build
