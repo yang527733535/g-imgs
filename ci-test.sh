@@ -12,15 +12,16 @@ set -Exe pipefail
 
 pnpm i
 chmod +x node_modules/.bin/*
-# npm run build
+npm run production
+
+
 
 
 pwd
 # 复制构建产物
 
-chmod +rw /www/wwwroot/g-imgs/
-rm -rf /www/wwwroot/g-imgs/.next
-cp -rf .next /www/wwwroot/g-imgs/
+
+# cp -rf .next /www/wwwroot/g-imgs/
 
 
 # 2. 使用进程管理工具 PM2（推荐方案）
