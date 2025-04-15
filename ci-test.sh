@@ -17,6 +17,9 @@ chmod +x node_modules/.bin/*
 
 pwd
 # 复制构建产物
+
+chmod +rw /www/wwwroot/g-imgs/
+rm -rf /www/wwwroot/g-imgs/.next
 cp -rf .next /www/wwwroot/g-imgs/
 
 
