@@ -15,7 +15,7 @@ chmod +x node_modules/.bin/*
 # npm run build
 
 
-ls
+pwd
 # 复制构建产物
 cp -rf .next /www/wwwroot/g-imgs/
 
