@@ -12,7 +12,7 @@ set -Exe pipefail
 
 pnpm i
 chmod +x node_modules/.bin/*
-npm run production
+npm run build
 
 
 
