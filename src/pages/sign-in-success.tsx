@@ -15,30 +15,30 @@ const Page = () => {
     const { toast } = useToast()
     const { user } = useUser()
     
-    // useAsyncEffect(async()=>{
-    //     if(user){
-    //      try{
-    //         const userParam = {
-    //             id: user.id,
-    //             username: user.username ?? "", 
-    //             email: user.emailAddresses[0]?.emailAddress ?? '',
-    //             avatarUrl: user.imageUrl ?? ""
-    //          }
-    //          console.log("🚀 ~ Page ~ userParam:", userParam)
-    //          const data =await mutateAsync(userParam)
-    //          console.log("🚀 ~ useAsyncEffect ~ data:", data)
-    //      }catch(err){
-    //         console.log("🚀 ~ Page ~ err:", err)
-    //         toast({
-    //             variant: "destructive",
-    //             title: "Uh oh! Something went wrong.",
-    //             description:"Something went wrong. Please try again later."
-    //             // description: err.message,
-    //             // action: <ToastAction altText="Try again">Try again</ToastAction>,
-    //           })
-    //      }
-    //     }
-    // },[user])
+    useAsyncEffect(async()=>{
+        if(user){
+         try{
+            const userParam = {
+                id: user.id,
+                username: user.username ?? "", 
+                email: user.emailAddresses[0]?.emailAddress ?? '',
+                avatarUrl: user.imageUrl ?? ""
+             }
+             console.log("🚀 ~ Page ~ userParam:", userParam)
+             const data =await mutateAsync(userParam)
+             console.log("🚀 ~ useAsyncEffect ~ data:", data)
+         }catch(err){
+            console.log("🚀 ~ Page ~ err:", err)
+            toast({
+                variant: "destructive",
+                title: "Uh oh! Something went wrong.",
+                description:"Something went wrong. Please try again later."
+                // description: err.message,
+                // action: <ToastAction altText="Try again">Try again</ToastAction>,
+              })
+         }
+        }
+    },[user])
 
 
   return (
