@@ -1,7 +1,6 @@
 version: "3.9"
 services:
   app:
-  
     platform: "linux/amd64"
     build:
       context: .
@@ -12,12 +11,7 @@ services:
     ports:
       - "3000:3000"
     image: t3-app
-    volumes:
-      - ./logs:/app/logs  # 新增日志目录挂载
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "5"
     environment:
-      - DATABASE_URL=postgresql://postgres:password@localhost:5432/g-imgs
+      - DATABASE_URL=database_url_goes_here
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_bGFzdGluZy1jcmF5ZmlzaC04MS5jbGVyay5hY2NvdW50cy5kZXYk
+      - CLERK_SECRET_KEY=sk_test_xUDwSBmczyHxmByV3djkrtTAnKKzMUBtqmsMrdhKK2
