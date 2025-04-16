@@ -6,8 +6,7 @@ import type { NextPage } from 'next'
 import type { InferGetServerSidePropsType } from 'next'
 
 
-const Page: InferGetServerSidePropsType<typeof getServerSideProps> = (props) => {
-  console.log("🚀 ~ Page ~ props:", props)
+const Page: InferGetServerSidePropsType<typeof getServerSideProps> = () => {
   return (
     <div>
       <h1>Foo</h1>
