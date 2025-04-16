@@ -7,6 +7,8 @@ export default function Home() {
   // const hello = api.post.hello.useQuery({ text: "from tRPC" });
   //  const { user } = useUser()
 //   if (!user) return <SignIn />
+const { isSignedIn, user, isLoaded } = useUser()
+
   return (
     <>
       <Head>

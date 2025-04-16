@@ -34,3 +34,24 @@ export const posts = createTable(
     nameIndex: index("name_idx").on(example.name),
   })
 );
+
+
+export const users = createTable(
+  "user",
+  {
+    id: varchar("id", { length: 255 }).primaryKey(), // Clerk用户ID作为主键
+    username: varchar("username", { length: 256 }),
+    email: varchar("email", { length: 255 }).unique(), // 唯一邮箱
+    avatarUrl: varchar("avatar_url", { length: 512 }), // 头像URL
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  },
+  (user) => ({
+    emailIndex: index("email_idx").on(user.email),      // 邮箱索引
+    usernameIndex: index("username_idx").on(user.username), // 用户名索引
+  })
+);

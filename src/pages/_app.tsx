@@ -5,6 +5,7 @@ import { api } from "~/utils/api";
 import { ClerkProvider } from '@clerk/nextjs'
 import "~/styles/globals.css";
 import { zhCN } from '@clerk/localizations'
+import { Toaster } from "~/components/ui/toaster";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -12,6 +13,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <div className={GeistSans.className}>
       <Component {...pageProps} />
     </div>
+    <Toaster />
     </ClerkProvider>
   );
 };

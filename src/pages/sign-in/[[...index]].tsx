@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
      <SignIn />
-     <SignUp />
+     <SignUp forceRedirectUrl='/sign-in-success' />
     </>
   );
 }
